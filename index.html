@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desk Print</title>
+  <meta name="description" content="Desk Print: especialista em locação de impressoras para empresas e colégios em Campo Grande/MS. Impressão colorida a custo de preto e branco. Manutenção e venda de insumos.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Desk Print | Locação e Manutenção de Impressoras em Campo Grande">
+  <meta property="og:description" content="Especialista em locação de impressoras para empresas e colégios em Campo Grande/MS. Impressão colorida a custo de preto e branco.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #B8971A;
+      --gold-light: #D4AF37;
+      --gold-dark: #8B6B14;
+      --black: #0A0A0A;
+      --dark: #111111;
+      --dark-2: #1A1A1A;
+      --gray: #4A4A4A;
+      --light-gray: #F8F6F0;
+      --white: #FFFFFF;
+      --header-height: 80px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(184, 151, 26, 0.25);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: var(--gold-light); }
+
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--black) !important;
+      padding: 10px 22px !important;
+      border-radius: 4px;
+      font-weight: 600 !important;
+      transition: background 0.3s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-light) !important;
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--gold);
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--header-height);
+      left: 0; right: 0;
+      background: var(--black);
+      padding: 20px 24px;
+      z-index: 999;
+      border-bottom: 1px solid rgba(184, 151, 26, 0.25);
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.3s;
+    }
+
+    .mobile-nav a:hover { color: var(--gold-light); }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      background-color: var(--black);
+      background-image: url('https://images.pexels.com/photos/8297818/pexels-photo-8297818.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--header-height);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 55%, rgba(184, 151, 26, 0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 15%, rgba(184, 151, 26, 0.1) 0%, transparent 50%),
+        linear-gradient(rgba(10, 10, 10, 0.84), rgba(10, 10, 10, 0.84));
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(184, 151, 26, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184, 151, 26, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .overline {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(52px, 7vw, 88px);
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .hero-text h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-text h2 {
+      font-size: clamp(15px, 1.8vw, 18px);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--black);
+      padding: 14px 30px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid var(--gold);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(184, 151, 26, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      padding: 14px 30px;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(184, 151, 26, 0.1);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-logo-wrap img {
+      width: 340px;
+      height: auto;
+      max-width: 100%;
+      filter: drop-shadow(0 0 70px rgba(184, 151, 26, 0.5));
+      animation: floatLogo 7s ease-in-out infinite;
+    }
+
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-16px); }
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(184, 151, 26, 0.2);
+    }
+
+    .hero-stat .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .hero-stat .lbl {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 5px;
+    }
+
+    /* ===== STRIP ===== */
+    .strip {
+      background: var(--gold);
+      padding: 20px 24px;
+    }
+
+    .strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .strip-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .strip-item svg {
+      width: 22px;
+      height: 22px;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+
+    .strip-item span {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      line-height: 1.35;
+    }
+
+    /* ===== SECTIONS COMMON ===== */
+    section { padding: 100px 24px; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 3.8vw, 46px);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--gray);
+    }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-visual { position: relative; }
+
+    .about-card {
+      background: var(--black);
+      border-radius: 16px;
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+    }
+
+    .about-card::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(184, 151, 26, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .about-card-logo {
+      width: 72px;
+      margin-bottom: 28px;
+      filter: drop-shadow(0 0 20px rgba(184, 151, 26, 0.6));
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-card h3 {
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-card p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.6);
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      width: 116px;
+      height: 116px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(184, 151, 26, 0.55);
+      z-index: 2;
+    }
+
+    .about-badge .b-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .about-badge .b-txt {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--black);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .about-content .section-desc { margin-bottom: 32px; }
+
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    .check-list li::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      background: var(--gold);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A0A0A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E");
+      background-size: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 2px;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      background-color: var(--black);
+      background-image: url('https://images.pexels.com/photos/6620992/pexels-photo-6620992.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .services::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.88);
+    }
+
+    .services .container { position: relative; z-index: 1; }
+
+    .services .section-title { color: var(--white); }
+    .services .section-desc { color: rgba(255,255,255,0.55); }
+
+    .services-header {
+      margin-bottom: 56px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(184, 151, 26, 0.14);
+      border-radius: 16px;
+      padding: 40px 32px;
+      transition: all 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transform: scaleX(0);
+      transition: transform 0.4s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(184, 151, 26, 0.38);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(184, 151, 26, 0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--gold);
+    }
+
+    .service-icon svg { width: 26px; height: 26px; }
+
+    .service-card h3 {
+      font-size: 21px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ===== PLANS ===== */
+    .plans {
+      background-color: var(--light-gray);
+      background-image: url('https://images.pexels.com/photos/4792283/pexels-photo-4792283.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .plans::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(248, 246, 240, 0.92);
+    }
+
+    .plans .container { position: relative; z-index: 1; }
+
+    .plans-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .plans-header .section-desc {
+      margin: 0 auto;
+      max-width: 520px;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .plan-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 40px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .plan-card.featured {
+      background: var(--black);
+      border: 2px solid var(--gold);
+      transform: scale(1.04);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.22);
+    }
+
+    .plan-card:not(.featured):hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 44px rgba(0,0,0,0.1);
+      border-color: rgba(184, 151, 26, 0.35);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--black);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .plan-name {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .plan-card:not(.featured) .plan-name { color: var(--black); }
+    .plan-card.featured .plan-name { color: var(--white); }
+
+    .plan-sub {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+
+    .plan-card:not(.featured) .plan-sub { color: var(--gray); }
+    .plan-card.featured .plan-sub { color: rgba(255,255,255,0.55); }
+
+    .plan-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin-bottom: 36px;
+    }
+
+    .plan-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .plan-card:not(.featured) .plan-features li { color: var(--gray); }
+    .plan-card.featured .plan-features li { color: rgba(255,255,255,0.8); }
+
+    .plan-features li::before {
+      content: '';
+      width: 17px;
+      height: 17px;
+      min-width: 17px;
+      border-radius: 50%;
+      background: var(--gold);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A0A0A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E");
+      background-size: 9px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .plan-cta {
+      display: block;
+      text-align: center;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .plan-card:not(.featured) .plan-cta {
+      background: transparent;
+      color: var(--black);
+      border: 2px solid rgba(0,0,0,0.2);
+    }
+
+    .plan-card:not(.featured) .plan-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    .plan-card.featured .plan-cta {
+      background: var(--gold);
+      color: var(--black);
+      border: 2px solid var(--gold);
+    }
+
+    .plan-card.featured .plan-cta:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* ===== PRODUCTS ===== */
+    .products { background: var(--white); }
+
+    .products-header { margin-bottom: 56px; }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 36px 28px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(184, 151, 26, 0.06) 0%, transparent 60%);
+      transition: width 0.4s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 44px rgba(0,0,0,0.08);
+      border-color: rgba(184, 151, 26, 0.35);
+    }
+
+    .product-card:hover::before { width: 100%; }
+
+    .product-icon {
+      width: 54px;
+      height: 54px;
+      background: var(--light-gray);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--gold-dark);
+      transition: background 0.3s;
+    }
+
+    .product-card:hover .product-icon { background: rgba(184, 151, 26, 0.12); }
+
+    .product-icon svg { width: 26px; height: 26px; }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+
+    .product-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--gray);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      background-color: var(--black);
+      background-image: url('https://images.pexels.com/photos/17235421/pexels-photo-17235421.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.88);
+    }
+
+    .contact .container { position: relative; z-index: 1; }
+
+    .contact .section-title { color: var(--white); }
+    .contact .section-desc { color: rgba(255,255,255,0.55); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 56px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .c-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: rgba(184, 151, 26, 0.12);
+      border: 1px solid rgba(184, 151, 26, 0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+    }
+
+    .c-icon svg { width: 19px; height: 19px; }
+
+    .c-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    .c-value {
+      font-size: 15px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.55;
+    }
+
+    .c-value a {
+      color: rgba(255,255,255,0.78);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .c-value a:hover { color: var(--gold); }
+
+    .social-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .social-btn {
+      width: 42px;
+      height: 42px;
+      background: rgba(184, 151, 26, 0.12);
+      border: 1px solid rgba(184, 151, 26, 0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .social-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    .social-btn svg { width: 18px; height: 18px; }
+
+    .map-box {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(184, 151, 26, 0.2);
+      height: 380px;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #050505;
+      padding: 64px 24px 40px;
+      border-top: 1px solid rgba(184, 151, 26, 0.18);
+    }
+
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand img {
+      height: 50px;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.4);
+      max-width: 280px;
+    }
+
+    .footer-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p, .footer-bottom span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .wfloat {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .wfloat:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+    }
+
+    .wfloat svg { width: 28px; height: 28px; fill: white; }
+
+    /* ===== RESPONSIVE ===== */
+
+    /* --- 1200px: desktop médio --- */
+    @media (max-width: 1200px) {
+      .hero-content { gap: 48px; }
+      .about-grid { gap: 56px; }
+    }
+
+    /* --- 1024px: tablet landscape / desktop pequeno --- */
+    @media (max-width: 1024px) {
+      .hero-content { gap: 40px; }
+      .strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 72px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .plans-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+      .plan-card.featured { transform: none; box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    /* --- 768px: tablet portrait --- */
+    @media (max-width: 768px) {
+      :root { --header-height: 68px; }
+
+      /* Header */
+      nav { display: none; }
+      .menu-toggle { display: block; }
+      .logo img { height: 44px; }
+
+      /* Hero */
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: center;
+        padding: 56px 20px;
+      }
+      .hero-visual { order: -1; }
+      .hero-logo-wrap img { width: 180px; }
+      .hero-text h2 { margin: 0 auto 32px; }
+      .hero-buttons { justify-content: center; }
+      .hero-stats {
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 36px;
+        padding-top: 32px;
+      }
+
+      /* Strip */
+      .strip { padding: 20px; }
+      .strip-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+      /* About */
+      .about-grid { gap: 72px; }
+      .about-visual { margin-bottom: 12px; }
+      .about-card { padding: 32px; }
+      .about-badge {
+        width: 96px;
+        height: 96px;
+        bottom: -16px;
+        right: -8px;
+      }
+      .about-badge .b-num { font-size: 26px; }
+      .about-badge .b-txt { font-size: 10px; }
+
+      /* Services */
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 28px 24px; }
+
+      /* Plans */
+      .plans-grid { max-width: 100%; }
+      .plan-card { padding: 32px 24px; }
+
+      /* Products */
+      .products-grid { grid-template-columns: 1fr; }
+      .product-card { padding: 28px; }
+
+      /* Contact */
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .map-box { height: 280px; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      footer { padding: 56px 20px 36px; }
+
+      /* Sections */
+      section { padding: 80px 20px; }
+    }
+
+    /* --- 540px: mobile grande --- */
+    @media (max-width: 540px) {
+      .hero-logo-wrap img { width: 160px; }
+      .hero-stats { gap: 18px; }
+      .hero-stat .num { font-size: 28px; }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .btn-primary,
+      .btn-outline {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .about-badge { width: 88px; height: 88px; }
+      .about-badge .b-num { font-size: 22px; }
+
+      .plan-card { padding: 28px 20px; }
+      .service-card { padding: 24px 20px; }
+    }
+
+    /* --- 480px: mobile médio --- */
+    @media (max-width: 480px) {
+      :root { --header-height: 62px; }
+      .logo img { height: 40px; }
+
+      section { padding: 64px 16px; }
+      .strip { padding: 16px; }
+      .strip-inner { grid-template-columns: 1fr; gap: 12px; }
+
+      .hero-content { padding: 44px 16px; gap: 28px; }
+      .hero-text h2 { font-size: 14px; line-height: 1.7; }
+      .hero-stats { gap: 14px; margin-top: 28px; padding-top: 24px; }
+
+      .about-card { padding: 24px; }
+      .about-badge { width: 80px; height: 80px; bottom: -12px; right: -4px; }
+      .about-badge .b-num { font-size: 20px; }
+
+      .service-card { padding: 22px 18px; }
+      .plan-card { padding: 24px 18px; }
+      .product-card { padding: 24px 18px; }
+
+      .contact-item { gap: 12px; }
+      .c-icon { width: 38px; height: 38px; min-width: 38px; }
+      .map-box { height: 240px; }
+
+      footer { padding: 48px 16px 32px; }
+      .footer-brand p { max-width: 100%; }
+    }
+
+    /* --- 375px: mobile pequeno --- */
+    @media (max-width: 375px) {
+      .logo img { height: 36px; }
+
+      .hero-logo-wrap img { width: 130px; }
+      .hero-text h1 { font-size: 44px; }
+      .hero-stat .num { font-size: 24px; }
+      .hero-stat .lbl { font-size: 11px; }
+      .hero-stats { gap: 12px; }
+
+      .about-card { padding: 20px; }
+      .about-badge { display: none; }
+
+      .service-card { padding: 20px 16px; }
+      .plan-card { padding: 20px 16px; }
+
+      .strip-inner { gap: 10px; }
+      .strip-item span { font-size: 12px; }
+
+      .c-value { font-size: 13px; }
+      .c-label { font-size: 10px; }
+
+      .wfloat { width: 48px; height: 48px; bottom: 20px; right: 16px; }
+      .wfloat svg { width: 24px; height: 24px; }
+    }
+
+    /* ===== HERO ENTRANCE ===== */
+    .hero-text .overline { animation: heroUp 0.8s ease 0.1s both; }
+    .hero-text h1         { animation: heroUp 0.9s ease 0.25s both; }
+    .hero-text h2         { animation: heroUp 0.8s ease 0.42s both; }
+    .hero-buttons         { animation: heroUp 0.8s ease 0.58s both; }
+    .hero-stats           { animation: heroUp 0.8s ease 0.72s both; }
+    .hero-visual          { animation: heroIn  1s   ease 0.3s  both; }
+
+    @keyframes heroUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes heroIn {
+      from { opacity: 0; transform: scale(0.94); }
+      to   { opacity: 1; transform: scale(1);    }
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s cubic-bezier(.22,.68,0,1.2),
+                  transform 0.7s cubic-bezier(.22,.68,0,1.2);
+    }
+    [data-reveal="left"]  { transform: translateX(-36px); }
+    [data-reveal="right"] { transform: translateX(36px);  }
+    [data-reveal="scale"] { transform: scale(0.9); opacity: 0; }
+
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0) translateX(0) scale(1);
+    }
+
+    [data-delay="1"] { transition-delay: 0.08s; }
+    [data-delay="2"] { transition-delay: 0.18s; }
+    [data-delay="3"] { transition-delay: 0.28s; }
+    [data-delay="4"] { transition-delay: 0.38s; }
+    [data-delay="5"] { transition-delay: 0.48s; }
+    [data-delay="6"] { transition-delay: 0.58s; }
+
+    /* ===== GOLD LINE LABEL EFFECT ===== */
+    .section-label {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.6s ease 0.3s;
+    }
+    [data-reveal].revealed .section-label::before,
+    .section-label.revealed::before {
+      width: 28px;
+    }
+
+    /* ===== HEADER SCROLL STATE ===== */
+    header.scrolled {
+      background: rgba(10, 10, 10, 1) !important;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="#home" class="logo" aria-label="Desk Print - início">
+        <img src="logo.png" alt="Desk Print">
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#planos">Planos</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato" class="nav-cta">Fale conosco</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+    <a href="#sobre" onclick="closeMob()">Sobre</a>
+    <a href="#servicos" onclick="closeMob()">Serviços</a>
+    <a href="#planos" onclick="closeMob()">Planos</a>
+    <a href="#produtos" onclick="closeMob()">Produtos</a>
+    <a href="#contato" onclick="closeMob()">Fale conosco</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Início">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="overline">Campo Grande · MS · 8 anos de mercado</span>
+        <h1>Desk<br><em>Print</em></h1>
+        <h2>A nossa empresa ajudando a sua a causar boa impressão. Especialistas em locação de impressoras para empresas e colégios.</h2>
+        <div class="hero-buttons">
+          <a href="https://wa.me/5567XXXXXXXX" class="btn-primary" aria-label="Falar com a Desk Print pelo WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a href="#planos" class="btn-outline">Ver planos</a>
+        </div>
+        <div class="hero-stats" aria-label="Números da empresa">
+          <div class="hero-stat">
+            <div class="num" data-counter data-target="8" data-suffix="+">8+</div>
+            <div class="lbl">Anos de mercado</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-counter data-target="100" data-suffix="%">100%</div>
+            <div class="lbl">Suporte dedicado</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">CG</div>
+            <div class="lbl">Campo Grande</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-wrap">
+          <img src="logo.png" alt="Desk Print — locação de impressoras" width="340">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip" aria-label="Diferenciais">
+    <div class="strip-inner">
+      <div class="strip-item" data-reveal data-delay="1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span>Colorido a custo de P&B</span>
+      </div>
+      <div class="strip-item" data-reveal data-delay="2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Insumos inclusos no plano</span>
+      </div>
+      <div class="strip-item" data-reveal data-delay="3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Suporte ágil e eficiente</span>
+      </div>
+      <div class="strip-item" data-reveal data-delay="4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span>Empresas e colégios</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" data-reveal="left">
+          <div class="about-card">
+            <img class="about-card-logo" src="logo.png" alt="Desk Print">
+            <h3>Nossa missão</h3>
+            <p>Oferecer soluções de impressão de alta qualidade para empresas e instituições de ensino de Campo Grande, com tecnologia de ponta e custo acessível. Acreditamos que toda empresa merece causar uma boa impressão.</p>
+          </div>
+          <div class="about-badge" aria-label="8 anos de mercado">
+            <span class="b-num">8</span>
+            <span class="b-txt">anos de<br>mercado</span>
+          </div>
+        </div>
+        <div class="about-content" data-reveal data-delay="2">
+          <span class="section-label">Sobre nós</span>
+          <h2 class="section-title">A empresa que ajuda você a causar boa impressão</h2>
+          <p class="section-desc">Fundada há 8 anos em Campo Grande pela necessidade real do mercado local, a Desk Print cresceu organicamente construindo sua reputação com base em confiança, qualidade e resultados. Atendemos empresas de todos os portes e colégios com soluções completas de impressão.</p>
+          <ul class="check-list" style="margin-top: 28px;" aria-label="Vantagens da Desk Print">
+            <li>Especialistas em locação para empresas e colégios</li>
+            <li>Impressão colorida a custo de preto e branco</li>
+            <li>Manutenção preventiva e corretiva inclusa</li>
+            <li>Fornecimento de insumos, cartuchos e toners</li>
+            <li>8 anos de experiência em Campo Grande/MS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="services-header" data-reveal>
+        <span class="section-label">O que fazemos</span>
+        <h2 class="section-title">Nossos serviços</h2>
+        <p class="section-desc" style="max-width: 520px;">Soluções completas de impressão para empresas de todos os portes e instituições de ensino de Campo Grande.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card" data-reveal data-delay="1">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </div>
+          <h3>Locação de impressoras</h3>
+          <p>Impressoras de alta performance em regime de locação mensal. Sua empresa acessa equipamentos modernos sem custo de aquisição, com suporte e manutenção já inclusos no plano escolhido.</p>
+        </article>
+        <article class="service-card" data-reveal data-delay="2">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Manutenção de impressoras</h3>
+          <p>Manutenção preventiva e corretiva em impressoras de todas as marcas e modelos. Nossa equipe técnica garante o funcionamento contínuo, minimizando paradas e prejuízos na sua operação.</p>
+        </article>
+        <article class="service-card" data-reveal data-delay="3">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3>Venda de insumos</h3>
+          <p>Comercializamos toners originais e compatíveis, refil de tinta Epson e insumos para todos os modelos de impressoras do mercado. Qualidade e compatibilidade garantidas para impressões perfeitas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans" id="planos">
+    <div class="container">
+      <div class="plans-header" data-reveal>
+        <span class="section-label">Planos mensais de locação</span>
+        <h2 class="section-title">Escolha o plano ideal para sua empresa</h2>
+        <p class="section-desc">Planos flexíveis adaptados ao volume de impressão da sua empresa ou instituição de ensino. Entre em contato para receber uma proposta personalizada.</p>
+      </div>
+      <div class="plans-grid">
+        <!-- Plano Essencial -->
+        <div class="plan-card" data-reveal="scale" data-delay="1">
+          <h3 class="plan-name">Essencial</h3>
+          <p class="plan-sub">Ideal para pequenas empresas com volume moderado de impressões mensais.</p>
+          <ul class="plan-features" aria-label="Recursos do plano Essencial">
+            <li>1 impressora multifuncional</li>
+            <li>Toner incluso no plano</li>
+            <li>Manutenção preventiva</li>
+            <li>Suporte técnico</li>
+            <li>Impressão colorida</li>
+          </ul>
+          <a href="https://wa.me/5567XXXXXXXX" class="plan-cta" aria-label="Solicitar plano Essencial pelo WhatsApp">Solicitar plano</a>
+        </div>
+        <!-- Plano Empresarial (destaque) -->
+        <div class="plan-card featured" data-reveal="scale" data-delay="2">
+          <div class="plan-badge">Mais popular</div>
+          <h3 class="plan-name">Empresarial</h3>
+          <p class="plan-sub">Perfeito para empresas e colégios com alto volume de impressões diárias.</p>
+          <ul class="plan-features" aria-label="Recursos do plano Empresarial">
+            <li>2 impressoras multifuncionais</li>
+            <li>Toners e cartuchos inclusos</li>
+            <li>Manutenção preventiva e corretiva</li>
+            <li>Suporte prioritário</li>
+            <li>Colorido a custo de P&B</li>
+            <li>Troca de equipamento em falha</li>
+          </ul>
+          <a href="https://wa.me/5567XXXXXXXX" class="plan-cta" aria-label="Solicitar plano Empresarial pelo WhatsApp">Solicitar plano</a>
+        </div>
+        <!-- Plano Institucional -->
+
+        <div class="plan-card" data-reveal="scale" data-delay="3">
+          <h3 class="plan-name">Institucional</h3>
+          <p class="plan-sub">Soluções completas para grandes volumes e múltiplos departamentos.</p>
+          <ul class="plan-features" aria-label="Recursos do plano Institucional">
+            <li>3+ impressoras multifuncionais</li>
+            <li>Todos os insumos inclusos</li>
+            <li>Manutenção preventiva e corretiva</li>
+            <li>Atendimento dedicado</li>
+            <li>Colorido a custo de P&B</li>
+            <li>Relatórios de impressão</li>
+          </ul>
+          <a href="https://wa.me/5567XXXXXXXX" class="plan-cta" aria-label="Solicitar plano Institucional pelo WhatsApp">Solicitar plano</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="produtos">
+    <div class="container">
+      <div class="products-header" data-reveal>
+        <span class="section-label">Insumos</span>
+        <h2 class="section-title">Nossos produtos</h2>
+        <p class="section-desc" style="max-width: 520px;">Trabalhamos com insumos de qualidade para todos os modelos e marcas de impressoras disponíveis no mercado.</p>
+      </div>
+      <div class="products-grid">
+        <article class="product-card" data-reveal data-delay="1">
+          <div class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Toners originais</h3>
+          <p>Toners originais para todas as marcas: HP, Samsung, Brother, Canon, Lexmark e muito mais. Alta durabilidade e qualidade de impressão garantidas.</p>
+        </article>
+        <article class="product-card" data-reveal data-delay="2">
+          <div class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Refil de tinta Epson</h3>
+          <p>Refis para todos os modelos Epson, incluindo a linha EcoTank. Cores vibrantes, alto rendimento por cartucho e custo por página reduzido.</p>
+        </article>
+        <article class="product-card" data-reveal data-delay="3">
+          <div class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Toners compatíveis</h3>
+          <p>Toners compatíveis de alto desempenho para todos os modelos disponíveis no mercado nacional, com ótima relação de custo-benefício.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contato">
+    <div class="container">
+      <span class="section-label" data-reveal>Fale conosco</span>
+      <h2 class="section-title" data-reveal>Entre em contato</h2>
+      <p class="section-desc" style="max-width: 500px;" data-reveal data-delay="1">Estamos prontos para ajudar sua empresa. Entre em contato pelo WhatsApp, e-mail ou visite nossa unidade em Campo Grande.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item" data-reveal="left" data-delay="1">
+            <div class="c-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="c-label">Endereço</div>
+              <div class="c-value">Rua Zola Cícero, 481<br>Campo Grande — MS</div>
+            </div>
+          </div>
+          <div class="contact-item" data-reveal="left" data-delay="2">
+            <div class="c-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="c-label">Horário de funcionamento</div>
+              <div class="c-value">Segunda a sexta-feira<br>08:00 às 17:00</div>
+            </div>
+          </div>
+          <div class="contact-item" data-reveal="left" data-delay="3">
+            <div class="c-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="c-label">E-mail</div>
+              <div class="c-value">
+                <a href="mailto:deskprintcg@gmail.com">deskprintcg@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item" data-reveal="left" data-delay="4">
+            <div class="c-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <div class="c-label">WhatsApp</div>
+              <div class="c-value">
+                <a href="https://wa.me/5567XXXXXXXX">Iniciar conversa</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="c-label" style="margin-bottom: 12px;">Redes sociais</div>
+            <div class="social-row">
+              <a href="https://instagram.com/desk_printcg" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Desk Print — @desk_printcg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="map-box" data-reveal="right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.6!2d-54.6099122!3d-20.4345595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e878573494d5%3A0xc9e5a91b3f6f10d3!2sR.+Pres.+Dutra%2C+624+-+Monte+Castelo%2C+Campo+Grande+-+MS%2C+79011-160!5e0!3m2!1spt-BR!2sbr!4v1717286400000!5m2!1spt-BR!2sbr"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização da Desk Print em Campo Grande — MS"
+            aria-label="Mapa interativo com localização da Desk Print">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Desk Print">
+          <p>A nossa empresa ajudando a sua a causar boa impressão. Especialistas em locação e manutenção de impressoras em Campo Grande, MS.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Links rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-links">
+            <li><a href="mailto:deskprintcg@gmail.com">deskprintcg@gmail.com</a></li>
+            <li><a href="https://wa.me/5567XXXXXXXX">WhatsApp</a></li>
+            <li><a href="https://instagram.com/desk_printcg" target="_blank" rel="noopener noreferrer">@desk_printcg</a></li>
+            <li><a href="#contato">Seg — Sex · 08h às 17h</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Desk Print. Todos os direitos reservados.</p>
+        <span>CNPJ: 42.503.279/0001-76</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5567XXXXXXXX" class="wfloat" aria-label="Fale com a Desk Print pelo WhatsApp" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Rodapé MonteSite - Atualização Automática -->
+  <div id="root"></div>
+  <div id="montesite-footer-badge"></div>
+  <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+  <script>
+    /* ---- Menu mobile ---- */
+    const btn = document.getElementById('menuToggle');
+    const mNav = document.getElementById('mobileNav');
+
+    btn.addEventListener('click', () => {
+      const open = mNav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+
+    function closeMob() {
+      mNav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !mNav.contains(e.target)) closeMob();
+    });
+
+    /* ---- Header scroll ---- */
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ---- Scroll reveal (Intersection Observer) ---- */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+    /* ---- Counter animation ---- */
+    function runCounter(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1600;
+      const startTime = performance.now();
+
+      function tick(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          runCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.8 });
+
+    document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
+
+    /* ---- Parallax suave nos backgrounds ---- */
+    const parallaxEls = document.querySelectorAll('.hero, .services, .contact');
+
+    function applyParallax() {
+      parallaxEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const offset = (window.scrollY - el.offsetTop) * 0.25;
+        el.style.backgroundPositionY = `calc(50% + ${offset}px)`;
+      });
+    }
+
+    window.addEventListener('scroll', applyParallax, { passive: true });
+    applyParallax();
+  </script>
+</body>
+</html>
